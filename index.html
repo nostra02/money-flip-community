@@ -21,49 +21,63 @@
     }
 
     .container {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
+      padding: 15px;
       background: white;
       border-radius: 14px;
       max-width: 750px;
-      margin: auto;
+      margin: 20px auto;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      overflow: auto;
+      position: relative;
+      height: calc(100vh - 40px); /* Ensure full height but leave space for padding */
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(270deg, #f39c12, #e67e22);
+      background-size: 200% 100%;
+      animation: loading 3s linear infinite;
+      border-radius: 14px 14px 0 0;
+    }
+
+    @keyframes loading {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
     }
 
     h1 {
       color: #2c3e50;
-      font-size: 1.5em;
-      margin-bottom: 10px;
+      font-size: 1.4em;
+      margin-bottom: 8px;
     }
 
     h2 {
       color: #444;
-      font-size: 1.1em;
-      margin-bottom: 15px;
+      font-size: 1em;
+      margin-bottom: 10px;
     }
 
     .sub {
-      font-size: 0.95em;
+      font-size: 0.85em;
       color: #555;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     .link-button {
       display: inline-block;
       background-color: #f39c12;
       color: white;
-      padding: 12px 24px;
+      padding: 10px 20px;
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 1em;
+      font-size: 0.9em;
       transition: all 0.3s ease;
+      animation: pulse 2s infinite;
     }
 
     .link-button:hover {
@@ -72,33 +86,72 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
+    }
+
     .comments {
-      margin-top: 20px;
-      font-size: 0.85em;
+      margin-top: 10px;
+      font-size: 0.8em;
       color: #444;
+      background: #f7f7f7;
+      padding: 15px;
+      border-radius: 12px;
+      overflow-y: auto; /* Allows scrolling inside the comment section if needed */
     }
 
     .comments h3 {
       font-size: 1em;
       margin-bottom: 8px;
       color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .comment {
+      background: linear-gradient(to right, #f9f9f9, #e3f2fd);
+      padding: 14px;
+      margin-bottom: 10px;
+      border-left: 4px solid #27ae60;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment .name {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #2c3e50;
+    }
+
+    .comment .date {
+      font-size: 0.8em;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .comment p {
+      font-size: 0.85em;
+      color: #555;
     }
 
     .footer {
       font-size: 0.75em;
       color: #999;
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     @media (min-height: 700px) {
-      h1 { font-size: 1.8em; }
-      h2 { font-size: 1.2em; }
-      .sub { font-size: 1em; }
+      h1 { font-size: 1.5em; }
+      h2 { font-size: 1.1em; }
+      .sub { font-size: 0.9em; }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="progress-bar"></div>
+
     <h1>Join Our #1 Crypto Transfer & Money Flip Community</h1>
     <h2>Build Quiet Side Income in 2025</h2>
     <p class="sub">
@@ -109,9 +162,23 @@
 
     <div class="comments">
       <h3>What Members Say</h3>
-      <p>“Smart tips, no hype.” — Rachel</p>
-      <p>“Real value shared daily.” — Daniel</p>
-      <p>“Finally, a trusted space.” — Grace</p>
+      <div class="comment">
+        <div class="name">Rachel M.</div>
+        <div class="date">April 14, 2025</div>
+        <p>Joined last week and already picked up some smart tips. It’s not hype — very real conversations in there.</p>
+      </div>
+
+      <div class="comment">
+        <div class="name">Daniel A.</div>
+        <div class="date">April 13, 2025</div>
+        <p>I didn’t expect much at first, but this group is actually valuable. People share good insights you won’t find anywhere else.</p>
+      </div>
+
+      <div class="comment">
+        <div class="name">Grace K.</div>
+        <div class="date">April 12, 2025</div>
+        <p>If you’re curious about new income streams but tired of all the scams, this is a safe space to learn quietly.</p>
+      </div>
     </div>
 
     <div class="footer">&copy; 2025 Digital Growth Insights</div>
