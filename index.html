@@ -2,166 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Join Our #1 Crypto Community</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
+    body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #e3f2fd, #fce4ec);
       color: #333;
-      overflow: auto; /* Allow scrolling */
+      margin: 0;
+      padding: 20px;
     }
 
     .container {
-      padding: 15px;
-      background: white;
-      border-radius: 14px;
       max-width: 750px;
-      margin: 20px auto;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      position: relative;
-      min-height: 100vh; /* Minimum height to ensure full screen */
-      overflow: auto; /* Allow scrolling within the container */
-    }
-
-    .progress-bar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 4px;
-      width: 100%;
-      background: linear-gradient(270deg, #f39c12, #e67e22);
-      background-size: 200% 100%;
-      animation: loading 3s linear infinite;
-      border-radius: 14px 14px 0 0;
-    }
-
-    @keyframes loading {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
     }
 
     h1 {
       color: #2c3e50;
-      font-size: 1.4em;
-      margin-bottom: 8px;
+      font-size: 1.9em;
+      margin-bottom: 10px;
     }
 
     h2 {
       color: #444;
-      font-size: 1em;
-      margin-bottom: 10px;
+      font-size: 1.3em;
+      margin-bottom: 25px;
     }
 
     .sub {
-      font-size: 0.85em;
+      font-size: 1.1em;
       color: #555;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .join-message {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .arrows {
+      font-size: 2em;
+      display: block;
+      margin-top: 10px;
+      animation: flash 1.2s infinite;
+      color: #e67e22;
+    }
+
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     .link-button {
       display: inline-block;
       background-color: #f39c12;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 0.9em;
+      font-size: 1em;
+      margin-bottom: 20px;
       transition: all 0.3s ease;
-      animation: pulse 2s infinite;
     }
 
     .link-button:hover {
       background-color: #e67e22;
-      transform: scale(1.05);
+      transform: scale(1.1);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.5); }
-      70% { box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
+    .link-button:active {
+      background-color: #d35400;
+      transform: scale(1.05);
     }
 
     .comments {
-      margin-top: 10px;
-      font-size: 0.8em;
-      color: #444;
-      background: #f7f7f7;
-      padding: 15px;
-      border-radius: 12px;
-      overflow-y: auto; /* Allows scrolling inside the comment section if needed */
+      margin-top: 50px;
     }
 
     .comments h3 {
-      font-size: 1em;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
       color: #2c3e50;
-      font-weight: 600;
     }
 
     .comment {
-      background: linear-gradient(to right, #f9f9f9, #e3f2fd);
-      padding: 14px;
-      margin-bottom: 10px;
+      background-color: #f8f9fa;
+      padding: 18px;
+      margin-bottom: 20px;
       border-left: 4px solid #27ae60;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
 
     .comment .name {
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       color: #2c3e50;
     }
 
     .comment .date {
-      font-size: 0.8em;
-      color: #888;
-      margin-bottom: 8px;
-    }
-
-    .comment p {
       font-size: 0.85em;
-      color: #555;
+      color: #888;
+      margin-bottom: 10px;
     }
 
     .footer {
-      font-size: 0.75em;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.85em;
       color: #999;
-      margin-top: 10px;
     }
 
-    @media (min-height: 700px) {
-      h1 { font-size: 1.5em; }
-      h2 { font-size: 1.1em; }
-      .sub { font-size: 0.9em; }
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="progress-bar"></div>
-
-    <h1>Join Our #1 Crypto Transfer & Money Flip Community</h1>
-    <h2>Build Quiet Side Income in 2025</h2>
+    <h1>Join Our #1 Crypto Transfer & Money Flip Private Community</h1>
+    <h2>How Everyday People Are Building Quiet Side Income in 2025</h2>
     <p class="sub">
-      Discover how members are leveraging proven crypto transfer strategies to turn $500 into $5,000 — sometimes within minutes — using smart, time-sensitive opportunities.
+      A private online group is helping people grow crypto gains through smart flipping methods, alerts, and transfers — including methods where members have turned $500 in Bitcoin into $5,000 transfers within minutes. The movement is growing fast — join us today.
     </p>
 
+    <!-- Join message and flashing arrows -->
+    <p class="join-message">
+      Tap the button below to join now
+      <span class="arrows">↓↓↓</span>
+    </p>
+
+    <!-- Join button -->
     <a href="https://t.me/+MfNJjyjAMPszOWZk" class="link-button" target="_blank">Click Here to Join Now</a>
 
     <div class="comments">
-      <h3>What Members Say</h3>
+      <h3>What People Are Saying</h3>
+
       <div class="comment">
         <div class="name">Rachel M.</div>
         <div class="date">April 14, 2025</div>
@@ -181,7 +163,9 @@
       </div>
     </div>
 
-    <div class="footer">&copy; 2025 Digital Growth Insights</div>
+    <div class="footer">
+      &copy; 2025 Digital Growth Insights | For educational use only.
+    </div>
   </div>
 </body>
 </html>
