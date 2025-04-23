@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+      background: linear-gradient(145deg, #ffe9ec, #e6f7ff);
       color: #333;
       margin: 0;
       padding: 20px;
@@ -17,21 +17,23 @@
     .container {
       max-width: 750px;
       margin: auto;
-      background: white;
+      background: #ffffff;
       padding: 40px;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
-      color: #2c3e50;
-      font-size: 1.9em;
+      background: linear-gradient(90deg, #ff6f61, #ffbb33);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2em;
       margin-bottom: 10px;
     }
 
     h2 {
-      color: #444;
-      font-size: 1.3em;
+      color: #00b894;
+      font-size: 1.4em;
       margin-bottom: 25px;
     }
 
@@ -39,6 +41,7 @@
       font-size: 1.1em;
       color: #555;
       margin-bottom: 30px;
+      line-height: 1.6;
     }
 
     .join-section {
@@ -49,7 +52,7 @@
     .join-message {
       font-size: 1.2em;
       font-weight: 600;
-      color: #2c3e50;
+      color: #2d3436;
       margin-bottom: 10px;
     }
 
@@ -57,7 +60,7 @@
       font-size: 2.5em;
       display: block;
       animation: flash 1.2s infinite;
-      color: #e67e22;
+      color: #fd7e14;
       line-height: 1.2;
     }
 
@@ -68,25 +71,24 @@
 
     .link-button {
       display: inline-block;
-      background-color: #f39c12;
+      background: linear-gradient(to right, #f39c12, #e67e22);
       color: white;
       padding: 16px 32px;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: 700;
       font-size: 1.2em;
       transition: all 0.3s ease;
     }
 
     .link-button:hover {
-      background-color: #e67e22;
-      transform: scale(1.1);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(to right, #e67e22, #d35400);
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
 
     .link-button:active {
-      background-color: #d35400;
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     .comments {
@@ -99,17 +101,17 @@
     }
 
     .comment {
-      background-color: #f8f9fa;
+      background-color: #f9fbfd;
       padding: 18px;
       margin-bottom: 20px;
-      border-left: 4px solid #27ae60;
-      border-radius: 8px;
+      border-left: 5px solid #00cec9;
+      border-radius: 10px;
     }
 
     .comment .name {
       font-weight: 600;
       margin-bottom: 5px;
-      color: #2c3e50;
+      color: #0984e3;
     }
 
     .comment .date {
